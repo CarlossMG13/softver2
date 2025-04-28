@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Softver</title>
+    <!--Tailwind-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--AOS Animate-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body class="bg-[#0F101E]">
+    <!-- Inicia seccion nav -->
+    <nav
+    class="flex fixed top-0 l  eft-0 w-full justify-between items-center py-3 px-4 lg:px-8 text-white z-20 bg-opacity-90 bg-[#000000]"
+>
+        <div
+            data-aos="fade-down"
+            data-aos-duration="500"
+            class="logo"
+        >
+            <img class="w-24 lg:w-32" src="img/logo.png" alt="Logo">
+        </div>
+        <div class="lg:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none focus:ring-2 focus:ring-white">
+                <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                    <path id="menu-icon" fill-rule="evenodd" clip-rule="evenodd" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-5h18V6H3v2z"/>
+                    <path id="close-icon" class="hidden" fill-rule="evenodd" clip-rule="evenodd" d="M18.707 4.293a1 1 0 0 0-1.414 0L12 10.586 6.707 5.293a1 1 0 0 0-1.414 1.414L10.586 12l-5.293 5.293a1 1 0 0 0 1.414 1.414L12 13.414l5.293 5.293a1 1 0 0 0 1.414-1.414L13.414 12l5.293-5.293a1 1 0 0 0 0-1.414z"/>
+                </svg>
+            </button>
+        </div>
+        <div
+            id="menu-items"
+            class="hidden lg:flex lg:text-center"
+        >
+            <ul class="flex flex-col items-end lg:flex-row gap-4 lg:gap-12 text-white">
+                <li><a href="#inicio" class="transition hover:text-[#0056D2]">Inicio</a></li>
+                <li><a href="#services" class="transition hover:text-[#0056D2]">Softver</a></li>
+                <li><a href="http://logistic.softver.mx/vista/login/login.html" class="lg:px-5 lg:py-2 text-[#0056D2] lg:border lg:border-[#0056D2] lg:rounded-md font-bold lg:transition lg:hover:bg-[#0056D2] hover:text-white" target="_blank">Log-in</a></li>
+                <li><a href="#form" class="lg:px-5 lg:py-2 lg:bg-[#0056D2] text-white lg:rounded-md font-bold lg:transition lg:hover:scale-105">Contáctanos</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Termina seccion nav -->
+
+    <!-- Inicia seccion banner -->
+    <div class="w-full overflow-hidden">
+        <div class="banner mt-10 sm:mt-15 lg:mt-30 flex flex-col items-center text-center px-4   lg:items-center">
+            <div class="top-content-container w-full">
+                <div class="top-content flex justify-center md:justify-end gap-6 sm:gap-10 mt-10 lg:mt-0">
+                    <div class="hito">
+                        <h2 class="text-white text-3xl md:text-4xl xl:text-5xl">
+                            <b class="text-[#0056D2]">+</b>50
+                        </h2>
+                        <p class="text-[#A5A7B5] text-sm lg:text-end">
+                            EXITOSOS <br />
+                            PROYECTOS
+                        </p>
+                    </div>
+                    <div class="hito">
+                        <h2 class="text-white text-3xl md:text-4xl xl:text-5xl">
+                            <b class="text-[#0056D2]">+</b>40
+                        </h2>
+                        <p class="text-[#A5A7B5] text-sm lg:text-end">
+                            CLIENTES <br />
+                            SATISFECHOS
+                        </p>
+                    </div>
+                    <div class="hito">
+                        <h2 class="text-white text-3xl md:text-4xl xl:text-5xl">
+                            <b class="text-[#0056D2]">+</b>30
+                        </h2>
+                        <p class="text-[#A5A7B5] text-sm lg:text-end">
+                            EXITOSOS <br />
+                            PROYECTOS
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="img-banner-container flex sm:justify-center   sm:items-center md:justify-start md:items-start h-full w-full">
+                <div class="h-full w-full md:w-2/3 lg:w-3/5 xl:w-160 2xl:w-2/4">
+                    <img class="h-full w-full object-cover" src="img/banner-img.png" alt="Banner">
+                </div>
+            </div>
+            <div class="bottom-content-container w-full text-center lg:text-end">
+                <h2 class="text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl 2xl:text-7xl">
+                    TRANSFORMAMOS TECNOLOGÍA EN VALOR
+                </h2>
+            </div>
+        </div>
+    </div>
+    <!-- Termina seccion banner -->
+
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuItems = document.getElementById('menu-items');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    menuToggle.addEventListener('click', () => {
+        menuItems.classList.toggle('hidden');
+        menuItems.classList.toggle('flex');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+    });
+</script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
