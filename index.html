@@ -1,113 +1,696 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Softver</title>
     <!--Tailwind-->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!--AOS Animate-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-</head>
-<body class="bg-[#0F101E]">
+  </head>
+  <body class="bg-[#0F101E]">
     <!-- Inicia seccion nav -->
     <nav
-    class="flex fixed top-0 l  eft-0 w-full justify-between items-center py-3 px-4 lg:px-8 text-white z-20 bg-opacity-90 bg-[#000000]"
->
-        <div
-            data-aos="fade-down"
-            data-aos-duration="500"
-            class="logo"
+      class="flex fixed top-0 left-0 w-full justify-between items-center py-3 px-4 lg:px-8 text-white z-20 bg-opacity-90 bg-[#000000]"
+    >
+      <div data-aos="fade-down" data-aos-duration="500" class="logo">
+        <img class="w-24 lg:w-32" src="img/logo.png" alt="Logo" />
+      </div>
+      <div class="lg:hidden">
+        <button
+          id="menu-toggle"
+          class="text-white focus:outline-none focus:ring-2 focus:ring-white"
         >
-            <img class="w-24 lg:w-32" src="img/logo.png" alt="Logo">
-        </div>
-        <div class="lg:hidden">
-            <button id="menu-toggle" class="text-white focus:outline-none focus:ring-2 focus:ring-white">
-                <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                    <path id="menu-icon" fill-rule="evenodd" clip-rule="evenodd" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-5h18V6H3v2z"/>
-                    <path id="close-icon" class="hidden" fill-rule="evenodd" clip-rule="evenodd" d="M18.707 4.293a1 1 0 0 0-1.414 0L12 10.586 6.707 5.293a1 1 0 0 0-1.414 1.414L10.586 12l-5.293 5.293a1 1 0 0 0 1.414 1.414L12 13.414l5.293 5.293a1 1 0 0 0 1.414-1.414L13.414 12l5.293-5.293a1 1 0 0 0 0-1.414z"/>
-                </svg>
-            </button>
-        </div>
-        <div
-            id="menu-items"
-            class="hidden lg:flex lg:text-center"
-        >
-            <ul class="flex flex-col items-end lg:flex-row gap-4 lg:gap-12 text-white">
-                <li><a href="#inicio" class="transition hover:text-[#0056D2]">Inicio</a></li>
-                <li><a href="#services" class="transition hover:text-[#0056D2]">Softver</a></li>
-                <li><a href="http://logistic.softver.mx/vista/login/login.html" class="lg:px-5 lg:py-2 text-[#0056D2] lg:border lg:border-[#0056D2] lg:rounded-md font-bold lg:transition lg:hover:bg-[#0056D2] hover:text-white" target="_blank">Log-in</a></li>
-                <li><a href="#form" class="lg:px-5 lg:py-2 lg:bg-[#0056D2] text-white lg:rounded-md font-bold lg:transition lg:hover:scale-105">Contáctanos</a></li>
-            </ul>
-        </div>
+          <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+            <path
+              id="menu-icon"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-5h18V6H3v2z"
+            />
+            <path
+              id="close-icon"
+              class="hidden"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M18.707 4.293a1 1 0 0 0-1.414 0L12 10.586 6.707 5.293a1 1 0 0 0-1.414 1.414L10.586 12l-5.293 5.293a1 1 0 0 0 1.414 1.414L12 13.414l5.293 5.293a1 1 0 0 0 1.414-1.414L13.414 12l5.293-5.293a1 1 0 0 0 0-1.414z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div id="menu-items" class="hidden lg:flex lg:text-center">
+        <ul class="flex items-end flex-row gap-4 lg:gap-12 text-white">
+          <li>
+            <a href="#inicio" class="transition hover:text-[#0056D2]">Inicio</a>
+          </li>
+          <li>
+            <a href="#software" class="transition hover:text-[#0056D2]"
+              >Softwer Factory</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://softver.mx/logistics/"
+              class="transition hover:text-[#0056D2]"
+              target="_blank"
+              >Logistics</a
+            >
+          </li>
+          <li>
+            <a
+              href="http://logistic.softver.mx/vista/login/login.html"
+              class="lg:px-5 lg:py-2 text-[#0056D2] lg:border lg:border-[#0056D2] lg:rounded-md font-bold lg:transition lg:hover:bg-[#0056D2] hover:text-white"
+              target="_blank"
+              >Log-in</a
+            >
+          </li>
+          <li>
+            <a
+              href="#form"
+              class="lg:px-5 lg:py-2 lg:bg-[#0056D2] text-white lg:rounded-md font-bold lg:transition lg:hover:scale-105"
+              >Contáctanos</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
     <!-- Termina seccion nav -->
 
     <!-- Inicia seccion banner -->
-    <div class="w-full overflow-hidden">
-        <div class="banner mt-10 sm:mt-15 lg:mt-30 flex flex-col items-center text-center px-4   lg:items-center">
-            <div class="top-content-container w-full">
-                <div class="top-content flex justify-center md:justify-end gap-6 sm:gap-10 mt-10 lg:mt-0">
-                    <div class="hito">
-                        <h2 class="text-white text-3xl md:text-4xl xl:text-5xl">
-                            <b class="text-[#0056D2]">+</b>50
-                        </h2>
-                        <p class="text-[#A5A7B5] text-sm lg:text-end">
-                            EXITOSOS <br />
-                            PROYECTOS
-                        </p>
-                    </div>
-                    <div class="hito">
-                        <h2 class="text-white text-3xl md:text-4xl xl:text-5xl">
-                            <b class="text-[#0056D2]">+</b>40
-                        </h2>
-                        <p class="text-[#A5A7B5] text-sm lg:text-end">
-                            CLIENTES <br />
-                            SATISFECHOS
-                        </p>
-                    </div>
-                    <div class="hito">
-                        <h2 class="text-white text-3xl md:text-4xl xl:text-5xl">
-                            <b class="text-[#0056D2]">+</b>30
-                        </h2>
-                        <p class="text-[#A5A7B5] text-sm lg:text-end">
-                            EXITOSOS <br />
-                            PROYECTOS
-                        </p>
-                    </div>
-                </div>
+    <div id="inicio" class="w-full h-full overflow-hidden">
+      <div
+        class="banner mt-10 sm:mt-15 lg:mt-30 flex flex-col items-center text-center px-4 lg:items-center"
+      >
+        <div class="top-content-container w-full">
+          <div
+            class="top-content flex justify-center md:justify-end gap-6 sm:gap-10 mt-10 lg:mt-0"
+          >
+            <div data-aos="fade-left" class="hito">
+              <h2 class="text-white text-3xl md:text-4xl xl:text-5xl">
+                <b class="text-[#0056D2]">+</b>50
+              </h2>
+              <p class="text-[#A5A7B5] text-sm lg:text-end">
+                EXITOSOS <br />
+                PROYECTOS
+              </p>
             </div>
-            <div class="img-banner-container flex sm:justify-center   sm:items-center md:justify-start md:items-start h-full w-full">
-                <div class="h-full w-full md:w-2/3 lg:w-3/5 xl:w-160 2xl:w-2/4">
-                    <img class="h-full w-full object-cover" src="img/banner-img.png" alt="Banner">
-                </div>
+            <div data-aos="fade-left" class="hito">
+              <h2 class="text-white text-3xl md:text-4xl xl:text-5xl">
+                <b class="text-[#0056D2]">+</b>40
+              </h2>
+              <p class="text-[#A5A7B5] text-sm lg:text-end">
+                CLIENTES <br />
+                SATISFECHOS
+              </p>
             </div>
-            <div class="bottom-content-container w-full text-center lg:text-end">
-                <h2 class="text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl 2xl:text-7xl">
-                    TRANSFORMAMOS TECNOLOGÍA EN VALOR
-                </h2>
+            <div data-aos="fade-left" class="hito">
+              <h2 class="text-white text-3xl md:text-4xl xl:text-5xl">
+                <b class="text-[#0056D2]">+</b>30
+              </h2>
+              <p class="text-[#A5A7B5] text-sm lg:text-end">
+                EXITOSOS <br />
+                PROYECTOS
+              </p>
             </div>
+          </div>
         </div>
+        <div
+          class="img-banner-container flex sm:justify-center sm:items-center md:justify-start md:items-start h-full w-full"
+        >
+          <div class="h-full w-full md:w-2/3 lg:w-3/5 xl:w-160 2xl:w-2/4">
+            <img
+              data-aos="fade-right"
+              class="h-full w-full object-cover"
+              src="img/svg/blue/Asset 34.svg"
+              alt="Banner"
+            />
+          </div>
+        </div>
+        <div class="bottom-content-container w-full text-center md:text-end">
+          <h2
+            data-aos="fade-up"
+            class="text-white text-3xl sm:text-4xl md:text-7xl lg:text-8xl 2xl:text-8xl"
+          >
+            TRANSFORMAMOS TECNOLOGÍA EN VALOR
+          </h2>
+        </div>
+      </div>
     </div>
     <!-- Termina seccion banner -->
 
+    <!--Software Factory Section-->
+    <section
+      id="software"
+      class="px-5 pb-30 bg-gradient-to-b from-[#0F101E] to-[#000000] mt-20 | lg:mt-35 | xl:mt-50 | 2xl:mt-60"
+    >
+      <h3
+        data-aos="fade-right"
+        class="text-white text-3xl text-center | sm:text-4xl sm:text-start | md:text-5xl | xl:text-6xl"
+      >
+        SOFTWARE FACTORY
+      </h3>
+      <p
+        data-aos="fade-left"
+        class="text-[#A5A7B5] text-center text-sm mt-5 | sm:mt-10 sm:text-end sm:text-lg | lg:text-xl | 2xl:text-2xl"
+      >
+        Desarrollamos software con un equipo multidisciplinario y altamente
+        capacitado
+      </p>
+      <div
+        class="card-container flex flex-col items-center gap-5 | lg:flex-row lg:justify-center lg:gap-10 lg:items-stretch | xl:gap-20 | 2xl:gap-40 mt-10"
+      >
+        <div
+          data-aos="fade-up"
+          class="card1 mt-10 bg-[#0056D2] w-full rounded-xl overflow-hidden | sm:w-80 | lg:bg-[#D9D9D9] lg:hover:bg-[#0056D2] lg:hover:text-white"
+          style="min-height: 24rem"
+        >
+          <div
+            class="content p-4 text-white text-end flex flex-col items-center gap-2 | lg:transition lg:text-black lg:hover:text-white lg:h-full"
+          >
+            <h4 class="w-full text-end text-md break-words">
+              SISTEMAS WEB Y ESCRITORIO
+            </h4>
+            <img
+              src="img/svg/blue/Asset 1.svg"
+              alt=""
+              class="max-w-full h-auto"
+            />
+            <p class="break-words text-sm text-start">
+              Creamos sistemas web y de escritorio con las tecnologías web más
+              actuales. Nos enfocamos en la escalabilidad, el rendimiento y la
+              experiencia del usuario.
+            </p>
+          </div>
+        </div>
 
-<script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const menuItems = document.getElementById('menu-items');
-    const menuIcon = document.getElementById('menu-icon');
-    const closeIcon = document.getElementById('close-icon');
+        <div
+          data-aos="fade-up"
+          class="card2 mt-10 bg-[#0056D2] w-full rounded-xl overflow-hidden | sm:w-80 | lg:bg-[#D9D9D9] lg:hover:bg-[#0056D2] lg:hover:text-white"
+          style="min-height: 24rem"
+        >
+          <div
+            class="content p-4 text-white text-end flex flex-col items-center gap-2 | lg:transition lg:text-black lg:hover:text-white lg:h-full"
+          >
+            <h4 class="w-full text-end text-md break-words">APPS MÓVILES</h4>
+            <img
+              src="img/svg/blue/Asset 9.svg"
+              alt=""
+              class="max-w-full h-auto"
+            />
+            <p class="break-words text-sm text-start">
+              Para el desarrollo de apps contamos con expertos en Android y iOS
+            </p>
+          </div>
+        </div>
 
-    menuToggle.addEventListener('click', () => {
-        menuItems.classList.toggle('hidden');
-        menuItems.classList.toggle('flex');
-        menuIcon.classList.toggle('hidden');
-        closeIcon.classList.toggle('hidden');
-    });
-</script>
+        <div
+          data-aos="fade-up"
+          class="card3 mt-10 bg-[#0056D2] w-full rounded-xl overflow-hidden | sm:w-80 | lg:bg-[#D9D9D9] lg:hover:bg-[#0056D2] lg:hover:text-white"
+          style="min-height: 24rem"
+        >
+          <div
+            class="content p-4 text-white text-end flex flex-col items-center gap-2 | lg:transition lg:text-black lg:hover:text-white lg:h-full"
+          >
+            <h4 class="w-full text-end text-md break-words">SITIOS WEB</h4>
+            <img
+              src="img/svg/blue/Asset 16.svg"
+              alt=""
+              class="max-w-full h-auto"
+            />
+            <p class="break-words text-sm text-start">
+              Creamos sitios web, e-commerce o blogs y sitios auto
+              administrables
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Software Factory Section end-->
+
+    <!--Servicios Section start-->
+    <section class="bg-black px-5 pb-20 sm:pb-40">
+      <h3
+        data-aos="fade-left"
+        class="text-white text-3xl text-center | sm:text-4xl sm:text-end | md:text-5xl | xl:text-6xl"
+      >
+        SERVICIOS
+      </h3>
+      <p
+        data-aos="fade-right"
+        class="text-[#A5A7B5] text-center text-sm mt-5 | sm:mt-10 sm:text-start sm:text-lg | lg:text-xl | 2xl:text-2xl"
+      >
+        Auditoría de TI
+      </p>
+      <div
+        class="mt-10 parent gap-8 grid grid-cols-1 | sm:grid-cols-2 | lg:grid-cols-4 lg:gap-2 | xl:gap-5 | 2xl:gap-10"
+      >
+        <div
+          data-aos="fade-up"
+          class="bg-[#0F101E] h-70 w-full flex items-center justify-center border-l-5 border-[#00A8E8] | lg:transition lg:border-[#0F101E] lg:hover:border-[#00A8E8] lg:h-80"
+        >
+          <div class="content px-7 py-10">
+            <h3 class="pb-5 text-[#00A8E8] text-xl">PLANES DE TRABAJO</h3>
+            <p class="text-[#A5A7B5]">
+              Diseñamos estrategias personalizadas para optimizar la gestión de
+              tus proyectos y alcanzar tus objetivos de TI de manera eficiente.
+            </p>
+          </div>
+        </div>
+        <div
+          data-aos="fade-up"
+          class="bg-[#0F101E] h-70 w-full flex items-center justify-center border-l-5 border-[#FFC300] | lg:transition lg:border-[#0F101E] lg:hover:border-[#FFC300] lg:h-80"
+        >
+          <div class="content px-7 py-10">
+            <h3 class="pb-5 text-[#FFC300] text-xl">PROYECTOS INTERNOS</h3>
+            <p class="text-[#A5A7B5]">
+              Impulsamos el éxito de tu empresa con soluciones tecnológicas
+              innovadoras, adaptadas a tus necesidades y alineadas a tus metas
+              organizacionales.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            data-aos="fade-up"
+            class="bg-[#0F101E] h-70 w-full flex items-center justify-center border-l-5 border-[#FF3D57] | lg:transition lg:border-[#0F101E] lg:hover:border-[#FF3D57] lg:h-80"
+          >
+            <div class="content px-7 py-10">
+              <h3 class="pb-5 text-[#FF3D57] text-xl">
+                SEGURIDAD DE SERVICIOS
+              </h3>
+              <p class="text-[#A5A7B5]">
+                Protegemos tu infraestructura digital con análisis y medidas
+                proactivas que garantizan la continuidad y seguridad de tus
+                servicios.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            data-aos="fade-up"
+            class="bg-[#0F101E] h-70 w-full flex items-center justify-center border-l-5 border-[#00D084] | lg:transition lg:border-[#0F101E] lg:hover:border-[#00D084] lg:h-80"
+          >
+            <div class="content px-7 py-10">
+              <h3 class="pb-5 text-[#00D084] text-xl">
+                PROGRAMA DE MANTENIMIENTO
+              </h3>
+              <p class="text-[#A5A7B5]">
+                Mantenemos tu tecnología en óptimo estado con planes preventivos
+                y correctivos que aseguran un rendimiento constante y confiable.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            data-aos="fade-up"
+            class="bg-[#0F101E] h-70 w-full flex items-center justify-center border-l-5 border-[#7D3C98] | lg:transition lg:border-[#0F101E] lg:hover:border-[#7D3C98] lg:h-80"
+          >
+            <div class="content px-7 py-10">
+              <h3 class="pb-5 text-[#7D3C98] text-xl">EVALUACIONES</h3>
+              <p class="text-[#A5A7B5]">
+                Evaluamos el desempeño de tu entorno TI para identificar áreas
+                de mejora y maximizar la eficiencia operativa de tu
+                infraestructura.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            data-aos="fade-up"
+            class="bg-[#0F101E] h-70 w-full flex items-center justify-center border-l-5 border-[#007BFF] | lg:transition lg:border-[#0F101E] lg:hover:border-[#00A8E8] lg:h-80"
+          >
+            <div class="content px-7 py-10">
+              <h3 class="pb-5 text-[#00A8E8] text-xl">TIPOLOGÍA DE TU RED</h3>
+              <p class="text-[#A5A7B5]">
+                Analizamos y optimizamos tu red, asegurando una conectividad
+                estable y segura, adaptada a las necesidades específicas de tu
+                negocio.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full text-white flex flex-col items-center justify-start gap-5 | sm:col-span-2 | lg:justify-center"
+        >
+          <p
+            data-aos="fade-up"
+            class="text-center text-[#A5A7B5] | sm:text-2xl | xl:text-4xl"
+          >
+            Nosotros te ayudamos a resolver estas dudas y muchos más
+          </p>
+          <a
+            data-aos="fade-up"
+            href="#"
+            class="text-semibold py-2 px-4 bg-[#0056D2] rounded-lg"
+            >Contáctanos</a
+          >
+        </div>
+      </div>
+    </section>
+    <!--Servicio Section end-->
+
+    <!--Staff aumentation-->
+    <section
+      class="w-screen bg-gradient-to-t from-[#0F101E] to-[#000000] pb-40"
+    >
+      <div class="flex flex-col gap-10 text-white px-5">
+        <div class="lg:flex lg:gap-5 lg:items-center lg:justify-center">
+          <h3
+            data-aos="fade-right"
+            class="text-white text-3xl text-center | sm:text-4xl sm:text-start | md:text-5xl | xl:text-6xl"
+          >
+            STAFF AUGMENTATION
+          </h3>
+          <p data-aos="fade-left" class="text-start mt-5 | xl:text-xl">
+            <b class="xl:text-2xl"
+              >¿Necesitas ampliar tu equipo con talento especializado? </b
+            ><br />
+
+            Con Staff Augmentation, integra talento especializado de forma
+            rápida y flexible para impulsar tus proyectos. Ahorra tiempo y
+            costos mientras mantienes el control total.
+          </p>
+        </div>
+        <div class="lg:flex lg:gap-5 mt-10">
+          <div>
+            <div
+              data-aos="fade-up"
+              class="flex items-center justify-start gap-5"
+            >
+              <img class="w-20" src="img/checklist.svg" alt="" />
+              <p class="text-sm | xl:text-lg">
+                <b class="text-lg | xl:text-xl">Talento Especializado</b> <br />
+                Accede rápidamente a profesionales con las habilidades que tu
+                proyecto necesita.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div
+              data-aos="fade-up"
+              class="flex items-center justify-start gap-5"
+            >
+              <img class="w-20" src="img/checklist.svg" alt="" />
+              <p class="text-sm | xl:text-lg">
+                <b class="text-lg | xl:text-xl">Flexibilidad y ahorro</b> <br />
+                Ajusta tu equipo según la demanda y reduce costos operativos.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div
+              data-aos="fade-up"
+              class="flex items-center justify-start gap-5"
+            >
+              <img class="w-20" src="img/checklist.svg" alt="" />
+              <p class="text-sm | xl:text-lg">
+                <b class="text-lg | xl:text-xl">Control total</b> <br />
+                Mantente al mando del proyecto con una colaboración directa y
+                efectiva.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Staff augmentation end-->
+
+    <!--Success stories-->
+    <section
+      class="flex flex-col items-center justify-center bg-[#0F101E] px-5"
+    >
+      <div
+        class="content mt-20 text-white text-center text-md | md:text-lg | lg:px-50 | xl:px-55 | 2xl:px-60"
+      >
+        <p data-aos="fade-up" class="text-[#A5A7B5]">
+          Conoce a nuestros clientes
+        </p>
+        <h3 data-aos="fade-up" class="font-semibold text-4xl | md:text-5xl">
+          CASOS DE ÉXITO QUE INSPIRAN
+        </h3>
+        <p data-aos="fade-up" class="text-[#A5A7B5]">
+          El éxito de nuestros clientes es nuestro mayor logro. En Softver,
+          ofrecemos soluciones innovadoras y un servicio profesional que impulsa
+          su crecimiento. Conoce cómo hemos hecho la diferencia.
+        </p>
+      </div>
+
+      <div
+        class="parent mt-20 w-screen grid grid-cols-1 px-5 gap-10 | sm:grid-cols-2 sm:gap-10"
+      >
+        <div
+          data-aos="fade-right"
+          class="bg-black w-full h-100 rounded-xl flex flex-col items-center justify-center | md:h-80"
+        >
+          <div class="content p-5">
+            <p class="text-white | 2xl:text-xl">
+              Softver implementó un SICI integral para SEPSA, optimizando costos
+              operativos y la gestión de recursos humanos eficientemente. Su
+              solución a medida y profesionalismo fueron fundamentales para
+              digitalizar sus procesos portuarios.
+            </p>
+            <p class="text-[#007BFF] mt-2">SEPSA | Ing. Gilberto Ríos Ruíz</p>
+          </div>
+        </div>
+        <div
+          data-aos="fade-left"
+          class="bg-black w-full h-100 rounded-xl flex flex-col items-center justify-center | md:h-80"
+        >
+          <div class="content p-5">
+            <p class="text-white | 2xl:text-xl">
+              Softver optimizó la gestión de almacén de Grupo Rullan con dos
+              APIs .NET y una app móvil en React Native. Agilizó el registro,
+              consulta y el proceso de picking, impactando directamente el
+              inventario.
+            </p>
+            <p class="text-[#007BFF] mt-2">
+              Rullan Comex | Gerente Ricardo Sanchez
+            </p>
+          </div>
+        </div>
+        <div
+          data-aos="fade-right"
+          class="bg-black w-full h-100 rounded-xl flex flex-col items-center justify-center | md:h-80"
+        >
+          <div class="content p-5">
+            <p class="text-white | 2xl:text-xl">
+              Softver diseñó e implementó APIs en Flask para integrar Odoo con
+              Exiros, Beetrack, CT, Excel del Norte y VTEX. Facilitó información
+              clave para la tienda en línea y el rastreo de envíos de Tubos de
+              Aceros de México SA, utilizando PostgreSQL y formatos JSON/XML.
+            </p>
+            <p class="text-[#007BFF] mt-2">
+              Rullan Comex | Gerente Ricardo Sanchez
+            </p>
+          </div>
+        </div>
+        <div
+          data-aos="fade-left"
+          class="bg-black w-full h-100 rounded-xl flex flex-col items-center justify-center | md:h-80"
+        >
+          <div class="content p-5">
+            <p class="text-white | 2xl:text-xl">
+              Softver desarrolló un ERP integral en Java y MySQL para Grupo
+              (Verificaciones del País, Inversa y Akena), abarcando
+              cotizaciones, ventas, facturación, contabilidad, nómina e
+              inventarios. Adicionalmente, se integró un módulo de domótica para
+              control de accesos y ambiente.
+            </p>
+            <p class="text-[#007BFF] mt-2">
+              Ofix | Ing. Elías Castellanos & Ing. Rolando Calderon
+            </p>
+          </div>
+        </div>
+        <div
+          data-aos="fade-up"
+          class="bg-black w-full h-100 rounded-xl flex flex-col items-center justify-center | sm:col-span-2 sm:h-60"
+        >
+          <div class="content p-5 text-white flex flex-col items-center">
+            <h3 class="font-semibold text-center mb-5 | sm:text-xl">
+              JAMAICA´S CENTRAL BANK DIGITAL CURRENCY (CBDC) - JAM-DEX
+            </h3>
+            <p class="xl:text-xl">
+              Softver participó en el desarrollo de la capa móvil y backend del
+              exitoso piloto de la CBDC (JamDex) de Jamaica. Este proyecto
+              pionero impulsó la adopción de la moneda digital EJMD, marcando un
+              avance tecnológico significativo para el país.
+            </p>
+            <a
+              class="mt-2 font-semibold py-2 px-3 bg-[#0056D2] rounded-lg | md:mt-5"
+              href="#"
+              >Accede a la publicación
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Success stories end-->
+
+    <!--Contact form-->
+    <footer
+      id="form"
+      class="text-white py-10 bg-[#000000] mt-10 overflow-hidden"
+    >
+      <div class="formulario-container mx-auto px-4 w-full">
+        <h1 data-aos="fade-down" class="text-4xl mb-5 px-5 text-center">
+          Contacta a nuestro equipo
+        </h1>
+        <p
+          data-aos="fade-down"
+          class="text-md mb-5 px-5 text-center pb-10 | lg:px-40"
+        >
+          ¿Tienes dudas sobre cómo trabajamos? Nuestro equipo está disponible
+          24/7 para ayudarte. Chatea con nosotros y súmate a la experiencia en
+          menos de 5 minutos.
+        </p>
+        <div
+          class="px-2 flex items-center justify-center gap-5 | sm:px-20 | md-px-30 | lg:px-10"
+        >
+          <div class="w-full lg:w-1/2">
+            <form id="miFormulario">
+              <div class="space-y-4 lg:space-y-0 lg:space-x-5 lg:flex">
+                <div data-aos="fade-right" class="flex flex-col">
+                  <label for="nombre" class="block text-start mb-1"
+                    >Nombre</label
+                  >
+                  <input
+                    class="bg-[#0F101E] h-10 rounded-md pl-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    type="text"
+                    id="nombre"
+                    placeholder="Nombre"
+                    required
+                  />
+                </div>
+                <div data-aos="fade-right" class="flex flex-col flex-grow">
+                  <label for="apellido" class="block text-start mb-1"
+                    >Apellido</label
+                  >
+                  <input
+                    class="bg-[#0F101E] h-10 rounded-md pl-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    type="text"
+                    id="apellido"
+                    placeholder="Apellido"
+                    required
+                  />
+                </div>
+              </div>
+              <div data-aos="fade-right" class="flex flex-col mt-4">
+                <label for="email" class="block text-start mb-1"
+                  >Correo Electrónico</label
+                >
+                <input
+                  class="bg-[#0F101E] h-10 rounded-md pl-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  type="email"
+                  id="email"
+                  placeholder="tucorreo@ejemplo.com"
+                  required
+                />
+              </div>
+              <div data-aos="fade-right" class="flex flex-col mt-4">
+                <label for="phone" class="block text-start mb-1"
+                  >Teléfono</label
+                >
+                <input
+                  class="bg-[#0F101E] h-10 rounded-md pl-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  type="tel"
+                  id="phone"
+                  placeholder="Tu teléfono"
+                  required
+                />
+              </div>
+              <div data-aos="fade-right" class="flex flex-col mt-4">
+                <label for="message" class="block text-start mb-1"
+                  >Mensaje</label
+                >
+                <textarea
+                  class="bg-[#0F101E] rounded-md pl-4 w-full py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  id="message"
+                  placeholder="Escribe tu mensaje aquí"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                class="flex gap-5 items-center justify-center cursor-pointer transition hover:bg-[#0F101E] hover:text-white bg-white text-black px-8 py-2 rounded-lg mt-8 w-full [&>img]:w-5 [&>img]:hover:invert"
+                type="submit"
+              >
+                Enviar mensaje
+                <img src="img/whatsapp-128-svgrepo-com.svg" alt="" />
+              </button>
+            </form>
+          </div>
+          <div
+            data-aos="fade-left"
+            class="hidden lg:flex lg:justify-center lg:items-center lg:w-1/2 lg:h-full overflow-hidden"
+          >
+            <img
+              src="img/form-img.jpg"
+              alt="form"
+              class="w-full max-w-full h-auto block"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Contact form end-->
+
     <script>
-        AOS.init();
+      document
+        .getElementById("miFormulario")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Evita el envío tradicional del formulario
+
+          // Obtener los valores del formulario
+          let name = document.getElementById("nombre").value;
+          let lastName = document.getElementById("apellido").value;
+          let email = document.getElementById("email").value;
+          let phone = document.getElementById("phone").value;
+          let message = document.getElementById("message").value;
+
+          //Validación básica
+          if (!name || !email || !phone || !message) {
+            alert("Por favor, completa todos los campos.");
+            return;
+          }
+
+          // Número de WhatsApp al que quieres enviar el mensaje
+          let numeroWhatsApp = "522292155125"; // Reemplaza con el número de destino
+
+          // Mensaje
+          let mensaje = `👋 Hola, mi nombre es ${name} ${lastName}. 📧 Mi correo es ${email}. 📱 Mi número es ${phone}. ${message}.`;
+
+          // Codificar el mensaje para URL
+          let mensajeCodificado = encodeURIComponent(mensaje);
+
+          // Crear la URL de WhatsApp
+          let url = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
+
+          // Redirigir a la URL de WhatsApp
+          window.location.href = url;
+        });
     </script>
-</body>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const menuItems = document.getElementById("menu-items");
+      const menuIcon = document.getElementById("menu-icon");
+      const closeIcon = document.getElementById("close-icon");
+
+      menuToggle.addEventListener("click", () => {
+        menuItems.classList.toggle("hidden");
+        menuItems.classList.toggle("flex");
+        menuIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+      });
+    </script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
