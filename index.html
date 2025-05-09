@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Softver</title>
     <!--Tailwind-->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="lib/tailwind/output.css" rel="stylesheet" />
     <!--AOS Animate-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="lib/aos/dist/aos.css">
+    <!--favicon-->
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
   </head>
   <body class="bg-[#0F101E] w-full">
@@ -648,6 +648,13 @@
     </footer>
     <!--Contact form end-->
 
+    <script src="lib/aos/dist/aos.js">
+    </script>
+
+    <script>
+      AOS.init();
+    </script>
+
     <script>
       document
         .getElementById("miFormulario")
@@ -697,8 +704,6 @@
         closeIcon.classList.toggle("hidden");
       });
     </script>
-    <script>
-      AOS.init();
-    </script>
+
   </body>
 </html>
