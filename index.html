@@ -3,11 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Softver</title>
+    <title>Softver: Trasnformamos Tecnología en Valor</title>
+    <meta
+      name="description"
+      content="Softver es una empresa líder en desarrollo de software en Veracruz, México. Creamos soluciones de software innovadoras y a medida para impulsar tu negocio. Desde aplicaciones web y móviles hasta sistemas empresariales complejos, nuestro equipo de expertos transforma tus ideas en realidad."
+    />
+    <meta
+      name="keywords"
+      content="desarrollo de software, software a medida, aplicaciones web, aplicaciones móviles, sistemas empresariales, desarrollo web, desarrollo móvil, Veracruz, México, innovación tecnológica, transformación digital"
+    />
+    <meta name="author" content="Softver" />
+    <meta name="robots" content="index, follow" />
+    <meta name="copyright" content="© 2025 Softver MX" />
+    <meta http-equiv="content-language" content="es" />
+
     <!--Tailwind-->
     <link href="lib/tailwind/output.css" rel="stylesheet" />
     <!--AOS Animate-->
-    <link rel="stylesheet" href="lib/aos/dist/aos.css">
+    <link rel="stylesheet" href="lib/aos/dist/aos.css" />
     <!--favicon-->
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
   </head>
@@ -16,7 +29,7 @@
     <nav
       class="flex fixed top-0 left-0 w-full justify-between items-center py-3 px-4 sm:px-6 lg:px-8 text-white z-20 bg-opacity-90 bg-[#000000]"
     >
-      <div data-aos="fade-down" data-aos-duration="500" class="logo">
+      <div data-aos="fade-down" data-aos-duration="500" class="logo flex">
         <img class="w-20 sm:w-24 lg:w-32" src="img/logo.png" alt="Logo" />
       </div>
       <div class="lg:hidden">
@@ -42,7 +55,9 @@
         </button>
       </div>
       <div id="menu-items" class="hidden lg:flex lg:text-center">
-        <ul class="flex items-end flex-row gap-4 lg:gap-12 text-white">
+        <ul
+          class="flex items-end flex-col gap-4 lg:gap-12 text-white | lg:flex-row"
+        >
           <li>
             <a href="#inicio" class="transition hover:text-[#0056D2]">Inicio</a>
           </li>
@@ -648,8 +663,7 @@
     </footer>
     <!--Contact form end-->
 
-    <script src="lib/aos/dist/aos.js">
-    </script>
+    <script src="lib/aos/dist/aos.js"></script>
 
     <script>
       AOS.init();
@@ -704,6 +718,5 @@
         closeIcon.classList.toggle("hidden");
       });
     </script>
-
   </body>
 </html>

@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /lib/
+Disallow: /img/
+Disallow: /vids/
+Disallow: /css/
+Disallow: /js/
+Disallow: /tailwind.config.js
+Disallow: /package-lock.json
+Disallow: /package.json
+Disallow: /.git/
+Disallow: /node_modules/
+
+Sitemap: https://softver.mx/sitemap.xml
