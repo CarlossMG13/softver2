@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="lib/aos/dist/aos.css">
     <!--favicon-->
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <!--i18n-->
+    <script src="https://unpkg.com/i18next/dist/umd/i18next.js"></script>
   </head>
   <body class="bg-[#0F101E] w-full">
     <!-- Inicia seccion nav -->
@@ -42,12 +44,12 @@
         </button>
       </div>
       <div id="menu-items" class="hidden lg:flex lg:text-center">
-        <ul class="flex items-end flex-row gap-4 lg:gap-12 text-white">
+        <ul class="flex items-end flex-col gap-4 lg:flex-row lg:gap-12 text-white">
           <li>
-            <a href="#inicio" class="transition hover:text-[#0056D2]">Inicio</a>
+            <a href="#inicio" class="transition hover:text-[#0056D2]" data-i18n="nav.home">Inicio</a>
           </li>
           <li>
-            <a href="#software" class="transition hover:text-[#0056D2]"
+            <a href="#software" class="transition hover:text-[#0056D2]" data-i18n="nav.softwareFactory"
               >Softwer Factory</a
             >
           </li>
@@ -63,17 +65,23 @@
             <a
               href="http://logistic.softver.mx/vista/login/login.html"
               class="lg:px-5 lg:py-2 text-[#0056D2] lg:bor der lg:border-[#0056D2] lg:rounded-md font-bold lg:transition lg:hover:bg-[#0056D2] hover:text-white"
-              target="_blank"
+              target="_blank" data-i18n="nav.login"
               >Log-in</a
             >
           </li>
           <li>
             <a
               href="#form"
-              class="lg:px-5 lg:py-2 lg:bg-[#0056D2] text-white lg:rounded-md font-bold lg:transition lg:hover:scale-105"
+              class="lg:px-5 lg:py-2 lg:bg-[#0056D2] text-white lg:rounded-md font-bold lg:transition lg:hover:scale-105" data-i18n="nav.contactUs"
               >Contáctanos</a
             >
           </li>
+          <li>
+                    <button class="lang-button cursor-pointer bg-gray-700 hover:bg-gray-600 text-white font-bold py-1 px-2 rounded text-sm" data-lang="es">ES</button>
+                </li>
+                <li>
+                    <button class="lang-button cursor-pointer bg-gray-700 hover:bg-gray-600 text-white font-bold py-1 px-2 rounded text-sm" data-lang="en">EN</button>
+                </li>
         </ul>
       </div>
     </nav>
@@ -104,7 +112,7 @@
       >
         SOFTVER MX
       </h1>
-      <p data-aos="fade-up" class="px-5 mb-10 | lg:text-2xl lg:px-10 z-10">
+      <p data-aos="fade-up" class="px-5 mb-10 | lg:text-2xl lg:px-10 z-10" data-i18n="banner.slogan">
         TRANSFORMAMOS TECNOLOGÍA EN VALOR
       </p>
       <div
@@ -113,7 +121,7 @@
         <a
           data-aos="fade-up"
           href="#form"
-          class="border transition hover:bg-white hover:text-black"
+          class="border transition hover:bg-white hover:text-black" data-i18n="banner.tellUsYourProject"
           >Cuéntanos tu proyecto</a
         >
       </div>
@@ -127,13 +135,13 @@
     >
       <h3
         data-aos="fade-up"
-        class="text-white text-3xl text-center | sm:text-4xl sm:text-start | md:text-5xl | xl:text-6xl"
+        class="text-white text-3xl text-center | sm:text-4xl sm:text-start | md:text-5xl | xl:text-6xl" data-i18n="softwareFactory.title"
       >
         SOFTWARE FACTORY
       </h3>
       <p
         data-aos="fade-up"
-        class="text-[#A5A7B5] text-center text-sm mt-5 | sm:mt-10 sm:text-end sm:text-lg | lg:text-xl | 2xl:text-2xl"
+        class="text-[#A5A7B5] text-center text-sm mt-5 | sm:mt-10 sm:text-end sm:text-lg | lg:text-xl | 2xl:text-2xl" data-i18n="softwareFactory.description"
       >
         Desarrollamos software con un equipo multidisciplinario y altamente
         capacitado
@@ -149,7 +157,7 @@
           <div
             class="content p-4 text-white text-end flex flex-col items-center gap-2 | lg:transition lg:text-black lg:hover:text-white lg:h-full"
           >
-            <h4 class="w-full text-end text-md break-words">
+            <h4 class="w-full text-end text-md break-words" data-i18n="softwareFactory.webDesktopSystems.title">
               SISTEMAS WEB Y ESCRITORIO
             </h4>
             <img
@@ -159,7 +167,7 @@
             />
             <p
               class="break-words text-sm text-start"
-              style="overflow-wrap: break-word"
+              style="overflow-wrap: break-word" data-i18n="softwareFactory.webDesktopSystems.description"
             >
               Creamos sistemas web y de escritorio con las tecnologías web más
               actuales. Nos enfocamos en la escalabilidad, el rendimiento y la
@@ -176,7 +184,7 @@
           <div
             class="content p-4 text-white text-end flex flex-col items-center gap-2 | lg:transition lg:text-black lg:hover:text-white lg:h-full"
           >
-            <h4 class="w-full text-end text-md break-words">APPS MÓVILES</h4>
+            <h4 class="w-full text-end text-md break-words" data-i18n="softwareFactory.mobileApps.title">APPS MÓVILES</h4>
             <img
               src="img/svg/blue/Asset 9.svg"
               alt=""
@@ -185,6 +193,7 @@
             <p
               class="break-words text-sm text-start"
               style="overflow-wrap: break-word"
+              data-i18n="softwareFactory.mobileApps.description"
             >
               Para el desarrollo de apps contamos con expertos en Android y iOS
             </p>
@@ -199,7 +208,7 @@
           <div
             class="content p-4 text-white text-end flex flex-col items-center gap-2 | lg:transition lg:text-black lg:hover:text-white lg:h-full"
           >
-            <h4 class="w-full text-end text-md break-words">SITIOS WEB</h4>
+            <h4 class="w-full text-end text-md break-words" data-i18n="softwareFactory.websites.title">SITIOS WEB</h4>
             <img
               src="img/svg/blue/Asset 16.svg"
               alt=""
@@ -208,6 +217,7 @@
             <p
               class="break-words text-sm text-start"
               style="overflow-wrap: break-word"
+              data-i18n="softwareFactory.websites.description"
             >
               Creamos sitios web, e-commerce o blogs y sitios auto
               administrables
@@ -223,12 +233,14 @@
       <h3
         data-aos="fade-up"
         class="text-white text-3xl text-center | sm:text-4xl sm:text-end | md:text-5xl | xl:text-6xl"
+        data-i18n="services.title"
       >
         SERVICIOS
       </h3>
       <p
         data-aos="fade-up"
         class="text-[#A5A7B5] text-center text-sm mt-5 | sm:mt-10 sm:text-start sm:text-lg | lg:text-xl | 2xl:text-2xl"
+        data-i18n="services.itAudit"
       >
         Auditoría de TI
       </p>
@@ -240,8 +252,8 @@
           class="bg-[#0F101E] h-70 w-full flex items-center justify-center border-l-5 border-[#00A8E8] | lg:transition lg:border-[#0F101E] lg:hover:border-[#00A8E8] lg:h-80"
         >
           <div class="content px-7 py-10">
-            <h3 class="pb-5 text-[#00A8E8] text-xl">PLANES DE TRABAJO</h3>
-            <p class="text-[#A5A7B5]" style="overflow-wrap: break-word">
+            <h3 class="pb-5 text-[#00A8E8] text-xl" data-i18n="services.workPlans.title">PLANES DE TRABAJO</h3>
+            <p class="text-[#A5A7B5]" style="overflow-wrap: break-word" data-i18n="services.workPlans.description">
               Diseñamos estrategias personalizadas para optimizar la gestión de
               tus proyectos y alcanzar tus objetivos de TI de manera eficiente.
             </p>
@@ -252,8 +264,8 @@
           class="bg-[#0F101E] h-70 w-full flex items-center justify-center border-l-5 border-[#FFC300] | lg:transition lg:border-[#0F101E] lg:hover:border-[#FFC300] lg:h-80"
         >
           <div class="content px-7 py-10">
-            <h3 class="pb-5 text-[#FFC300] text-xl">PROYECTOS INTERNOS</h3>
-            <p class="text-[#A5A7B5]" style="overflow-wrap: break-word">
+            <h3 class="pb-5 text-[#FFC300] text-xl" data-i18n="services.internalProjects.title">PROYECTOS INTERNOS</h3>
+            <p class="text-[#A5A7B5]" style="overflow-wrap: break-word" data-i18n="services.internalProjects.description">
               Impulsamos el éxito de tu empresa con soluciones tecnológicas
               innovadoras, adaptadas a tus necesidades y alineadas a tus metas
               organizacionales.
@@ -266,10 +278,11 @@
             class="bg-[#0F101E] h-70 w-full flex items-center justify-center border-l-5 border-[#FF3D57] | lg:transition lg:border-[#0F101E] lg:hover:border-[#FF3D57] lg:h-80"
           >
             <div class="content px-7 py-10">
-              <h3 class="pb-5 text-[#FF3D57] text-xl">
+              <h3 class="pb-5 text-[#FF3D57] text-xl"
+              data-i18n="services.serviceSecurity.title">
                 SEGURIDAD DE SERVICIOS
               </h3>
-              <p class="text-[#A5A7B5]" style="overflow-wrap: break-word">
+              <p class="text-[#A5A7B5]" style="overflow-wrap: break-word" data-i18n="services.serviceSecurity.description">
                 Protegemos tu infraestructura digital con análisis y medidas
                 proactivas que garantizan la continuidad y seguridad de tus
                 servicios.
@@ -283,10 +296,11 @@
             class="bg-[#0F101E] h-70 w-full flex items-center justify-center border-l-5 border-[#00D084] | lg:transition lg:border-[#0F101E] lg:hover:border-[#00D084] lg:h-80"
           >
             <div class="content px-7 py-10">
-              <h3 class="pb-5 text-[#00D084] text-xl">
+              <h3 class="pb-5 text-[#00D084] text-xl"
+              data-i18n="services.maintenanceProgram.title">
                 PROGRAMA DE MANTENIMIENTO
               </h3>
-              <p class="text-[#A5A7B5]" style="overflow-wrap: break-word">
+              <p class="text-[#A5A7B5]" style="overflow-wrap: break-word" data-i18n="services.maintenanceProgram.description">
                 Mantenemos tu tecnología en óptimo estado con planes preventivos
                 y correctivos que aseguran un rendimiento constante y confiable.
               </p>
@@ -299,8 +313,8 @@
             class="bg-[#0F101E] h-70 w-full flex items-center justify-center border-l-5 border-[#7D3C98] | lg:transition lg:border-[#0F101E] lg:hover:border-[#7D3C98] lg:h-80"
           >
             <div class="content px-7 py-10">
-              <h3 class="pb-5 text-[#7D3C98] text-xl">EVALUACIONES</h3>
-              <p class="text-[#A5A7B5]" style="overflow-wrap: break-word">
+              <h3 class="pb-5 text-[#7D3C98] text-xl" data-i18n="services.evaluations.title">EVALUACIONES</h3>
+              <p class="text-[#A5A7B5]" style="overflow-wrap: break-word" data-i18n="services.evaluations.description">
                 Evaluamos el desempeño de tu entorno TI para identificar áreas
                 de mejora y maximizar la eficiencia operativa de tu
                 infraestructura.
@@ -314,8 +328,8 @@
             class="bg-[#0F101E] h-70 w-full flex items-center justify-center border-l-5 border-[#007BFF] | lg:transition lg:border-[#0F101E] lg:hover:border-[#00A8E8] lg:h-80"
           >
             <div class="content px-4 py-10">
-              <h3 class="pb-5 text-[#00A8E8] text-xl">TIPOLOGÍA DE TU RED</h3>
-              <p class="text-[#A5A7B5]" style="overflow-wrap: break-word">
+              <h3 class="pb-5 text-[#00A8E8] text-xl" data-i18n="services.networkTopology.title">TIPOLOGÍA DE TU RED</h3>
+              <p class="text-[#A5A7B5]" style="overflow-wrap: break-word" data-i18n="services.networkTopology.description">
                 Analizamos y optimizamos tu red, asegurando una conectividad
                 estable y segura, adaptada a las necesidades específicas de tu
                 negocio.
@@ -329,6 +343,7 @@
           <p
             data-aos="fade-up"
             class="text-center text-[#A5A7B5] | sm:text-2xl | xl:text-4xl"
+            data-i18n="services.helpText"
           >
             Nosotros te ayudamos a resolver estas dudas y muchos más
           </p>
@@ -336,6 +351,7 @@
             data-aos="fade-up"
             href="#miFormulario"
             class="text-semibold py-2 px-4 bg-[#0056D2] rounded-lg"
+            data-i18n="services.contactUsButton"
             >Contáctanos</a
           >
         </div>
@@ -352,16 +368,18 @@
           <h3
             data-aos="fade-up"
             class="text-white text-3xl text-center lg:text-left sm:text-4xl md:text-5xl xl:text-6xl"
+            data-i18n="staffAugmentation.title"
           >
             STAFF AUGMENTATION
           </h3>
           <p
             data-aos="fade-up"
             class="text-white mt-5 text-start xl:text-lg lg:mt-0 lg:max-w-lg"
+            data-i18n="staffAugmentation.description"
           >
-            <b class="xl:text-2xl"
+            <span class="xl:text-2xl text-bold"
               >¿Necesitas ampliar tu equipo con talento especializado?
-            </b>
+            </span>
             Con Staff Augmentation, integra talento especializado de forma
             rápida y flexible para impulsar tus proyectos. Ahorra tiempo y
             costos mientras mantienes el control total.
@@ -371,10 +389,10 @@
           <div data-aos="fade-up" class="flex items-start gap-5">
             <img class="w-16 h-16" src="img/checklist.svg" alt="" />
             <div>
-              <h4 class="text-lg font-semibold text-white">
+              <h4 class="text-lg font-semibold text-white" data-i18n="staffAugmentation.specializedTalent.title">
                 Talento Especializado
               </h4>
-              <p class="text-sm text-[#A5A7B5]">
+              <p class="text-sm text-[#A5A7B5]" data-i18n="staffAugmentation.specializedTalent.description">
                 Accede rápidamente a profesionales con las habilidades que tu
                 proyecto necesita.
               </p>
@@ -383,10 +401,10 @@
           <div data-aos="fade-up" class="flex items-start gap-5">
             <img class="w-16 h-16" src="img/checklist.svg" alt="" />
             <div>
-              <h4 class="text-lg font-semibold text-white">
+              <h4 class="text-lg font-semibold text-white" data-i18n="staffAugmentation.flexibilitySavings.title">
                 Flexibilidad y ahorro
               </h4>
-              <p class="text-sm text-[#A5A7B5]">
+              <p class="text-sm text-[#A5A7B5]" data-i18n="staffAugmentation.flexibilitySavings.description">
                 Ajusta tu equipo según la demanda y reduce costos operativos.
               </p>
             </div>
@@ -394,8 +412,8 @@
           <div data-aos="fade-up" class="flex items-start gap-5">
             <img class="w-16 h-16" src="img/checklist.svg" alt="" />
             <div>
-              <h4 class="text-lg font-semibold text-white">Control total</h4>
-              <p class="text-sm text-[#A5A7B5]">
+              <h4 class="text-lg font-semibold text-white" data-i18n="staffAugmentation.fullControl.title">Control total</h4>
+              <p class="text-sm text-[#A5A7B5]" data-i18n="staffAugmentation.fullControl.description">
                 Mantente al mando del proyecto con una colaboración directa y
                 efectiva.
               </p>
@@ -408,244 +426,249 @@
 
     <!--Success stories-->
     <section
-      class="flex flex-col items-center justify-center bg-[#0F101E] px-5"
+  class="flex flex-col items-center justify-center bg-[#0F101E] px-5"
+>
+  <div
+    class="content mt-20 text-white text-center text-md | md:text-lg | lg:px-50 | xl:px-55 | 2xl:px-60"
+  >
+    <p data-aos="fade-up" class="text-[#A5A7B5]" data-i18n="successStories.intro">
+      Conoce a nuestros clientes
+    </p>
+    <h3 data-aos="fade-up" class="font-semibold text-4xl | md:text-5xl" data-i18n="successStories.title">
+      CASOS DE ÉXITO QUE INSPIRAN
+    </h3>
+    <p data-aos="fade-up" class="text-[#A5A7B5]" data-i18n="successStories.description">
+      El éxito de nuestros clientes es nuestro mayor logro. En Softver,
+      ofrecemos soluciones innovadoras y un servicio profesional que impulsa
+      su crecimiento. Conoce cómo hemos hecho la diferencia.
+    </p>
+  </div>
+
+  <div
+    class="parent mt-20 w-screen grid grid-cols-1 px-5 gap-10 | sm:grid-cols-2 sm:gap-10"
+  >
+    <div
+      data-aos="fade-up"
+      class="bg-black w-full h-100 rounded-xl flex flex-col items-center justify-center | md:h-80"
     >
-      <div
-        class="content mt-20 text-white text-center text-md | md:text-lg | lg:px-50 | xl:px-55 | 2xl:px-60"
-      >
-        <p data-aos="fade-up" class="text-[#A5A7B5]">
-          Conoce a nuestros clientes
+      <div class="content p-5">
+        <p class="text-white | 2xl:text-xl" data-i18n="successStories.sepsa.text">
+          Softver implementó un SICI integral para SEPSA, optimizando costos
+          operativos y la gestión de recursos humanos eficientemente. Su
+          solución a medida y profesionalismo fueron fundamentales para
+          digitalizar sus procesos portuarios.
         </p>
-        <h3 data-aos="fade-up" class="font-semibold text-4xl | md:text-5xl">
-          CASOS DE ÉXITO QUE INSPIRAN
+
+        <div class="flex gap-5 mt-10 items-center justify-start">
+          <img src="img/sepsa-logo.png" alt="sepsa" class="h-5" />
+          <p class="text-[#007BFF] mt-2" data-i18n="successStories.sepsa.client">SEPSA | Ing. Gilberto Ríos Ruíz</p>
+        </div>
+      </div>
+    </div>
+    <div
+      data-aos="fade-up"
+      class="bg-black w-full h-100 rounded-xl flex flex-col items-center justify-center | md:h-80"
+    >
+      <div class="content p-5">
+        <p class="text-white | 2xl:text-xl" data-i18n="successStories.rullan.text">
+          Softver optimizó la gestión de almacén de Grupo Rullan con dos
+          APIs .NET y una app móvil en React Native. Agilizó el registro,
+          consulta y el proceso de picking, impactando directamente el
+          inventario.
+        </p>
+        <div class="flex gap-5 mt-10 items-center justify-start">
+          <img src="img/rullan-logo.png" alt="rullan" class="h-5" />
+          <p class="text-[#007BFF] mt-2" data-i18n="successStories.rullan.client">
+            Rullan Comex | Gerente Ricardo Sanchez
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      data-aos="fade-up"
+      class="bg-black w-full h-100 rounded-xl flex flex-col items-center justify-center | md:h-80"
+    >
+      <div class="content p-5">
+        <p class="text-white | 2xl:text-xl" data-i18n="successStories.ofix.text">
+          Softver diseñó e implementó APIs en Flask para integrar Odoo con
+          Exiros, Beetrack, CT, Excel del Norte y VTEX. Facilitó información
+          clave para la tienda en línea y el rastreo de envíos de Tubos de
+          Aceros de México SA, utilizando PostgreSQL y formatos JSON/XML.
+        </p>
+        <div class="flex gap-5 mt-10 items-center justify-start">
+          <img src="img/ofix-logo.png" alt="ofix-logo" class="w-20" />
+          <p class="text-[#007BFF] mt-2" data-i18n="successStories.ofix.client">
+            Ofix | Ing. Elías Castellanos & Ing. Rolando Calderon
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      data-aos="fade-up"
+      class="bg-black w-full h-100 rounded-xl flex flex-col items-center justify-center | md:h-80"
+    >
+      <div class="content p-5">
+        <p class="text-white | 2xl:text-xl" data-i18n="successStories.verificaciones.text">
+          Softver desarrolló un ERP integral en Java y MySQL para Grupo
+          (Verificaciones del País, Inversa y Akena), abarcando
+          cotizaciones, ventas, facturación, contabilidad, nómina e
+          inventarios. Adicionalmente, se integró un módulo de domótica para
+          control de accesos y ambiente.
+        </p>
+        <div class="flex gap-5 mt-10 items-center justify-start">
+          <img src="img/verf-pais-logo.png" alt="ofix-logo" class="w-20" />
+          <p class="text-[#007BFF] mt-2" data-i18n="successStories.verificaciones.client">
+            Verificaciones del País, Inversa y Akena | Ing. Alejandro Carus
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      data-aos="fade-up"
+      class="bg-black w-full h-100 rounded-xl flex flex-col items-center justify-center | sm:col-span-2 sm:h-60"
+    >
+      <div class="content p-5 text-white flex flex-col items-center">
+        <h3 class="font-semibold text-center mb-5 | sm:text-xl" data-i18n="successStories.jamdex.title">
+          JAMAICA´S CENTRAL BANK DIGITAL CURRENCY (CBDC) - JAM-DEX
         </h3>
-        <p data-aos="fade-up" class="text-[#A5A7B5]">
-          El éxito de nuestros clientes es nuestro mayor logro. En Softver,
-          ofrecemos soluciones innovadoras y un servicio profesional que impulsa
-          su crecimiento. Conoce cómo hemos hecho la diferencia.
+        <p class="xl:text-xl" data-i18n="successStories.jamdex.text">
+          Softver participó en el desarrollo de la capa móvil y backend del
+          exitoso piloto de la CBDC (JamDex) de Jamaica. Este proyecto
+          pionero impulsó la adopción de la moneda digital EJMD, marcando un
+          avance tecnológico significativo para el país.
         </p>
+        <a
+          class="mt-2 font-semibold py-2 px-3 bg-[#0056D2] rounded-lg | md:mt-5"
+          href="https://www.instagram.com/p/Ca3IDOwDKci/?utm_source=ig_web_copy_link"
+          target="_blank"
+          data-i18n="successStories.jamdex.link">Accede a la publicación
+        </a>
       </div>
-
-      <div
-        class="parent mt-20 w-screen grid grid-cols-1 px-5 gap-10 | sm:grid-cols-2 sm:gap-10"
-      >
-        <div
-          data-aos="fade-up"
-          class="bg-black w-full h-100 rounded-xl flex flex-col items-center justify-center | md:h-80"
-        >
-          <div class="content p-5">
-            <p class="text-white | 2xl:text-xl">
-              Softver implementó un SICI integral para SEPSA, optimizando costos
-              operativos y la gestión de recursos humanos eficientemente. Su
-              solución a medida y profesionalismo fueron fundamentales para
-              digitalizar sus procesos portuarios.
-            </p>
-
-            <div class="flex gap-5 mt-10 items-center justify-start">
-              <img src="img/sepsa-logo.png" alt="sepsa" class="h-5" />
-              <p class="text-[#007BFF] mt-2">SEPSA | Ing. Gilberto Ríos Ruíz</p>
-            </div>
-          </div>
-        </div>
-        <div
-          data-aos="fade-up"
-          class="bg-black w-full h-100 rounded-xl flex flex-col items-center justify-center | md:h-80"
-        >
-          <div class="content p-5">
-            <p class="text-white | 2xl:text-xl">
-              Softver optimizó la gestión de almacén de Grupo Rullan con dos
-              APIs .NET y una app móvil en React Native. Agilizó el registro,
-              consulta y el proceso de picking, impactando directamente el
-              inventario.
-            </p>
-            <div class="flex gap-5 mt-10 items-center justify-start">
-              <img src="img/rullan-logo.png" alt="rullan" class="h-5" />
-              <p class="text-[#007BFF] mt-2">
-                Rullan Comex | Gerente Ricardo Sanchez
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          data-aos="fade-up"
-          class="bg-black w-full h-100 rounded-xl flex flex-col items-center justify-center | md:h-80"
-        >
-          <div class="content p-5">
-            <p class="text-white | 2xl:text-xl">
-              Softver diseñó e implementó APIs en Flask para integrar Odoo con
-              Exiros, Beetrack, CT, Excel del Norte y VTEX. Facilitó información
-              clave para la tienda en línea y el rastreo de envíos de Tubos de
-              Aceros de México SA, utilizando PostgreSQL y formatos JSON/XML.
-            </p>
-            <div class="flex gap-5 mt-10 items-center justify-start">
-              <img src="img/ofix-logo.png" alt="ofix-logo" class="w-20" />
-              <p class="text-[#007BFF] mt-2">
-                Ofix | Ing. Elías Castellanos & Ing. Rolando Calderon
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          data-aos="fade-up"
-          class="bg-black w-full h-100 rounded-xl flex flex-col items-center justify-center | md:h-80"
-        >
-          <div class="content p-5">
-            <p class="text-white | 2xl:text-xl">
-              Softver desarrolló un ERP integral en Java y MySQL para Grupo
-              (Verificaciones del País, Inversa y Akena), abarcando
-              cotizaciones, ventas, facturación, contabilidad, nómina e
-              inventarios. Adicionalmente, se integró un módulo de domótica para
-              control de accesos y ambiente.
-            </p>
-            <div class="flex gap-5 mt-10 items-center justify-start">
-              <img src="img/verf-pais-logo.png" alt="ofix-logo" class="w-20" />
-              <p class="text-[#007BFF] mt-2">
-                Verificaciones del País, Inversa y Akena | Ing. Alejandro Carus
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          data-aos="fade-up"
-          class="bg-black w-full h-100 rounded-xl flex flex-col items-center justify-center | sm:col-span-2 sm:h-60"
-        >
-          <div class="content p-5 text-white flex flex-col items-center">
-            <h3 class="font-semibold text-center mb-5 | sm:text-xl">
-              JAMAICA´S CENTRAL BANK DIGITAL CURRENCY (CBDC) - JAM-DEX
-            </h3>
-            <p class="xl:text-xl">
-              Softver participó en el desarrollo de la capa móvil y backend del
-              exitoso piloto de la CBDC (JamDex) de Jamaica. Este proyecto
-              pionero impulsó la adopción de la moneda digital EJMD, marcando un
-              avance tecnológico significativo para el país.
-            </p>
-            <a
-              class="mt-2 font-semibold py-2 px-3 bg-[#0056D2] rounded-lg | md:mt-5"
-              href="https://www.instagram.com/p/Ca3IDOwDKci/?utm_source=ig_web_copy_link"
-              target="_blank"
-              >Accede a la publicación
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
+  </div>
+</section>
     <!--Success stories end-->
 
     <!--Contact form-->
     <footer
-      id="form"
-      class="text-white pt-10 bg-[#000000] mt-10 overflow-hidden"
+  id="form"
+  class="text-white pt-10 bg-[#000000] mt-10 overflow-hidden"
+>
+  <div class="formulario-container mx-auto px-4 w-full">
+    <h1 data-aos="fade-down" class="text-4xl mb-5 px-5 text-center" data-i18n="contactForm.title">
+      Contacta a nuestro equipo
+    </h1>
+    <p
+      data-aos="fade-down"
+      class="text-md mb-5 px-5 text-center pb-10 | lg:px-40"
+      data-i18n="contactForm.description">
+      ¿Tienes dudas sobre cómo trabajamos? Nuestro equipo está disponible
+      24/7 para ayudarte. Chatea con nosotros y súmate a la experiencia en
+      menos de 5 minutos.
+    </p>
+    <div
+      class="px-2 flex items-center justify-center gap-5 | sm:px-20 | md-px-30 | lg:px-10"
     >
-      <div class="formulario-container mx-auto px-4 w-full">
-        <h1 data-aos="fade-down" class="text-4xl mb-5 px-5 text-center">
-          Contacta a nuestro equipo
-        </h1>
-        <p
-          data-aos="fade-down"
-          class="text-md mb-5 px-5 text-center pb-10 | lg:px-40"
-        >
-          ¿Tienes dudas sobre cómo trabajamos? Nuestro equipo está disponible
-          24/7 para ayudarte. Chatea con nosotros y súmate a la experiencia en
-          menos de 5 minutos.
-        </p>
-        <div
-          class="px-2 flex items-center justify-center gap-5 | sm:px-20 | md-px-30 | lg:px-10"
-        >
-          <div class="w-full lg:w-1/2">
-            <form id="miFormulario">
-              <div class="space-y-4 lg:space-y-0 lg:space-x-5 lg:flex">
-                <div data-aos="fade-right" class="flex flex-col">
-                  <label for="nombre" class="block text-start mb-1"
-                    >Nombre</label
-                  >
-                  <input
-                    class="bg-[#0F101E] h-10 rounded-md pl-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    type="text"
-                    id="nombre"
-                    placeholder="Nombre"
-                    required
-                  />
-                </div>
-                <div data-aos="fade-right" class="flex flex-col flex-grow">
-                  <label for="apellido" class="block text-start mb-1"
-                    >Apellido</label
-                  >
-                  <input
-                    class="bg-[#0F101E] h-10 rounded-md pl-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    type="text"
-                    id="apellido"
-                    placeholder="Apellido"
-                    required
-                  />
-                </div>
-              </div>
-              <div data-aos="fade-right" class="flex flex-col mt-4">
-                <label for="email" class="block text-start mb-1"
-                  >Correo Electrónico</label
-                >
-                <input
-                  class="bg-[#0F101E] h-10 rounded-md pl-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  type="email"
-                  id="email"
-                  placeholder="tucorreo@ejemplo.com"
-                  required
-                />
-              </div>
-              <div data-aos="fade-right" class="flex flex-col mt-4">
-                <label for="phone" class="block text-start mb-1"
-                  >Teléfono</label
-                >
-                <input
-                  class="bg-[#0F101E] h-10 rounded-md pl-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  type="tel"
-                  id="phone"
-                  placeholder="Tu teléfono"
-                  required
-                />
-              </div>
-              <div data-aos="fade-right" class="flex flex-col mt-4">
-                <label for="message" class="block text-start mb-1"
-                  >Mensaje</label
-                >
-                <textarea
-                  class="bg-[#0F101E] rounded-md pl-4 w-full py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  id="message"
-                  placeholder="Escribe tu mensaje aquí"
-                  rows="4"
-                  required
-                ></textarea>
-              </div>
-
-              <button
-                class="flex gap-5 items-center justify-center cursor-pointer transition hover:bg-[#0F101E] hover:text-white bg-white text-black px-8 py-2 rounded-lg mt-8 w-full [&>img]:w-5 [&>img]:hover:invert"
-                type="submit"
+      <div class="w-full lg:w-1/2">
+        <form id="miFormulario">
+          <div class="space-y-4 lg:space-y-0 lg:space-x-5 lg:flex">
+            <div data-aos="fade-right" class="flex flex-col">
+              <label for="nombre" class="block text-start mb-1"data-i18n="contactForm.nameLabel"
+                >Nombre</label
               >
-                Enviar mensaje
-                <img src="img/whatsapp-128-svgrepo-com.svg" alt="" />
-              </button>
-            </form>
+              <input
+                class="bg-[#0F101E] h-10 rounded-md pl-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                type="text"
+                id="nombre"
+                data-i18n-placeholder="contactForm.namePlaceholder"
+                placeholder="Nombre"
+                required
+              />
+            </div>
+            <div data-aos="fade-right" class="flex flex-col flex-grow">
+              <label for="apellido" class="block text-start mb-1" data-i18n="contactForm.lastNameLabel"
+                >Apellido</label
+              >
+              <input
+                class="bg-[#0F101E] h-10 rounded-md pl-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                type="text"
+                id="apellido"
+                data-i18n-placeholder="contactForm.lastNamePlaceholder"
+                placeholder="Apellido"
+                required
+              />
+            </div>
           </div>
-          <div
-            data-aos="fade-left"
-            class="hidden lg:flex lg:justify-center lg:items-center lg:w-1/2 lg:h-full overflow-hidden"
-          >
-            <img
-              src="img/form-img.jpg"
-              alt="form"
-              class="w-full max-w-full h-auto block"
+          <div data-aos="fade-right" class="flex flex-col mt-4">
+            <label for="email" class="block text-start mb-1" data-i18n="contactForm.emailLabel"
+              >Correo Electrónico</label
+            >
+            <input
+              class="bg-[#0F101E] h-10 rounded-md pl-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+              type="email"
+              id="email"
+              data-i18n-placeholder="contactForm.emailPlaceholder"
+              placeholder="tucorreo@ejemplo.com"
+              required
             />
           </div>
-        </div>
+          <div data-aos="fade-right" class="flex flex-col mt-4">
+            <label for="phone" class="block text-start mb-1" data-i18n="contactForm.phoneLabel"
+              >Teléfono</label
+            >
+            <input
+              class="bg-[#0F101E] h-10 rounded-md pl-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+              type="tel"
+              id="phone"
+              data-i18n-placeholder="contactForm.phonePlaceholder"
+              placeholder="Tu teléfono"
+              required
+            />
+          </div>
+          <div data-aos="fade-right" class="flex flex-col mt-4">
+            <label for="message" class="block text-start mb-1" data-i18n="contactForm.messageLabel"
+              >Mensaje</label
+            >
+            <textarea
+              class="bg-[#0F101E] rounded-md pl-4 w-full py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              id="message"
+              data-i18n-placeholder="contactForm.messagePlaceholder"
+              placeholder="Escribe tu mensaje aquí"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+
+          <button
+            class="flex gap-5 items-center justify-center cursor-pointer transition hover:bg-[#0F101E] hover:text-white bg-white text-black px-8 py-2 rounded-lg mt-8 w-full [&>img]:w-5 [&>img]:hover:invert"
+            type="submit"
+            data-i18n="contactForm.sendMessage">
+            Enviar mensaje
+            <img src="img/whatsapp-128-svgrepo-com.svg" alt="" />
+          </button>
+        </form>
       </div>
       <div
-        class="w-screen mt-10 flex items-center justify-between p-5 gap-10 | lg:justify-around"
+        data-aos="fade-left"
+        class="hidden lg:flex lg:justify-center lg:items-center lg:w-1/2 lg:h-full overflow-hidden"
       >
-        <img src="img/logo.png" class="w-30" alt="logo-softver" />
-        <p id="fade-up" class="text-sm font-semibold">
-          Copyright © 2025 Softver MX
-        </p>
+        <img
+          src="img/form-img.jpg"
+          alt="form"
+          class="w-full max-w-full h-auto block"
+        />
       </div>
-    </footer>
+    </div>
+  </div>
+  <div
+    class="w-screen mt-10 flex items-center justify-between p-5 gap-10 | lg:justify-around"
+  >
+    <img src="img/logo.png" class="w-30" alt="logo-softver" />
+    <p id="fade-up" class="text-sm font-semibold" data-i18n="footer.copyright">
+      Copyright © 2025 Softver MX
+    </p>
+  </div>
+</footer>
     <!--Contact form end-->
 
     <script src="lib/aos/dist/aos.js">
@@ -702,6 +725,282 @@
         menuItems.classList.toggle("flex");
         menuIcon.classList.toggle("hidden");
         closeIcon.classList.toggle("hidden");
+      });
+    </script>
+
+    <script>
+      // i18next initialization
+      i18next.init({
+        lng: 'es', // default language
+        fallbackLng: 'en',
+        debug: true,
+        resources: {
+          es: {
+            translation: {
+              nav: {
+                home: 'Inicio',
+                softwareFactory: 'Software Factory',
+                logistics: 'Logistics',
+                login: 'Log-in',
+                contactUs: 'Contáctanos'
+              },
+              banner: {
+                slogan: 'TRANSFORMAMOS TECNOLOGÍA EN VALOR',
+                tellUsYourProject: 'Cuéntanos tu proyecto'
+              },
+              softwareFactory: {
+                title: 'SOFTWARE FACTORY',
+                description: 'Desarrollamos software con un equipo multidisciplinario y altamente capacitado',
+                webDesktopSystems: {
+                  title: 'SISTEMAS WEB Y ESCRITORIO',
+                  description: 'Creamos sistemas web y de escritorio con las tecnologías web más actuales. Nos enfocamos en la escalabilidad, el rendimiento y la experiencia del usuario.'
+                },
+                mobileApps: {
+                  title: 'APPS MÓVILES',
+                  description: 'Para el desarrollo de apps contamos con expertos en Android y iOS'
+                },
+                websites: {
+                  title: 'SITIOS WEB',
+                  description: 'Creamos sitios web, e-commerce o blogs y sitios auto administrables'
+                }
+              },
+              services: {
+                title: 'SERVICIOS',
+                itAudit: 'Auditoría de TI',
+                workPlans: {
+                  title: 'PLANES DE TRABAJO',
+                  description: 'Diseñamos estrategias personalizadas para optimizar la gestión de tus proyectos y alcanzar tus objetivos de TI de manera eficiente.'
+                },
+                internalProjects: {
+                  title: 'PROYECTOS INTERNOS',
+                  description: 'Impulsamos el éxito de tu empresa con soluciones tecnológicas innovadoras, adaptadas a tus necesidades y alineadas a tus metas organizacionales.'
+                },
+                serviceSecurity: {
+                  title: 'SEGURIDAD DE SERVICIOS',
+                  description: 'Protegemos tu infraestructura digital con análisis y medidas proactivas que garantizan la continuidad y seguridad de tus servicios.'
+                },
+                maintenanceProgram: {
+                  title: 'PROGRAMA DE MANTENIMIENTO',
+                  description: 'Mantenemos tu tecnología en óptimo estado con planes preventivos y correctivos que aseguran un rendimiento constante y confiable.'
+                },
+                evaluations: {
+                  title: 'EVALUACIONES',
+                  description: 'Evaluamos el desempeño de tu entorno TI para identificar áreas de mejora y maximizar la eficiencia operativa de tu infraestructura.'
+                },
+                networkTopology: {
+                  title: 'TIPOLOGÍA DE TU RED',
+                  description: 'Analizamos y optimizamos tu red, asegurando una conectividad estable y segura, adaptada a las necesidades específicas de tu negocio.'
+                },
+                helpText: 'Nosotros te ayudamos a resolver estas dudas y muchos más',
+                contactUsButton: 'Contáctanos'
+              },
+              staffAugmentation: {
+                title: 'STAFF AUGMENTATION',
+                description: '¿Necesitas ampliar tu equipo con talento especializado? Con Staff Augmentation, integra talento especializado de forma rápida y flexible para impulsar tus proyectos. Ahorra tiempo y costos mientras mantienes el control total.',
+                specializedTalent: {
+                  title: 'Talento Especializado',
+                  description: 'Accede rápidamente a profesionales con las habilidades que tu proyecto necesita.'
+                },
+                flexibilitySavings: {
+                  title: 'Flexibilidad y ahorro',
+                  description: 'Ajusta tu equipo según la demanda y reduce costos operativos.'
+                },
+                fullControl: {
+                  title: 'Control total',
+                  description: 'Mantente al mando del proyecto con una colaboración directa y efectiva.'
+                }
+              },
+              successStories: {
+                intro: 'Conoce a nuestros clientes',
+                title: 'CASOS DE ÉXITO QUE INSPIRAN',
+                description: 'El éxito de nuestros clientes es nuestro mayor logro. En Softver, ofrecemos soluciones innovadoras y un servicio profesional que impulsa su crecimiento. Conoce cómo hemos hecho la diferencia.',
+                sepsa: {
+                  text: 'Softver implementó un SICI integral para SEPSA, optimizando costos operativos y la gestión de recursos humanos eficientemente. Su solución a medida y profesionalismo fueron fundamentales para digitalizar sus procesos portuarios.',
+                  client: 'SEPSA | Ing. Gilberto Ríos Ruíz'
+                },
+                rullan: {
+                  text: 'Softver optimizó la gestión de almacén de Grupo Rullan con dos APIs .NET y una app móvil en React Native. Agilizó el registro, consulta y el proceso de picking, impactando directamente el inventario.',
+                  client: 'Rullan Comex | Gerente Ricardo Sanchez'
+                },
+                ofix: {
+                  text: 'Softver diseñó e implementó APIs en Flask para integrar Odoo con Exiros, Beetrack, CT, Excel del Norte y VTEX. Facilitó información clave para la tienda en línea y el rastreo de envíos de Tubos de Aceros de México SA, utilizando PostgreSQL y formatos JSON/XML.',
+                  client: 'Ofix | Ing. Elías Castellanos & Ing. Rolando Calderon'
+                },
+                verificaciones: {
+                  text: 'Softver desarrolló un ERP integral en Java y MySQL para Grupo (Verificaciones del País, Inversa y Akena), abarcando cotizaciones, ventas, facturación, contabilidad, nómina e inventarios. Adicionalmente, se integró un módulo de domótica para control de accesos y ambiente.',
+                  client: 'Verificaciones del País, Inversa y Akena | Ing. Alejandro Carus'
+                },
+                jamdex: {
+                  title: 'JAMAICA´S CENTRAL BANK DIGITAL CURRENCY (CBDC) - JAM-DEX',
+                  text: 'Softver participó en el desarrollo de la capa móvil y backend del exitoso piloto de la CBDC (JamDex) de Jamaica. Este proyecto pionero impulsó la adopción de la moneda digital EJMD, marcando un avance tecnológico significativo para el país.',
+                  link: 'Accede a la publicación'
+                }
+              },
+              contactForm: {
+                title: 'Contacta a nuestro equipo',
+                description: '¿Tienes dudas sobre cómo trabajamos? Nuestro equipo está disponible 24/7 para ayudarte. Chatea con nosotros y súmate a la experiencia en menos de 5 minutos.',
+                nameLabel: 'Nombre',
+                namePlaceholder: 'Nombre',
+                lastNameLabel: 'Apellido',
+                lastNamePlaceholder: 'Apellido',
+                emailLabel: 'Correo Electrónico',
+                emailPlaceholder: 'tucorreo@ejemplo.com',
+                phoneLabel: 'Teléfono',
+                phonePlaceholder: 'Tu teléfono',
+                messageLabel: 'Mensaje',
+                messagePlaceholder: 'Escribe tu mensaje aquí',
+                sendMessage: 'Enviar mensaje'
+              },
+              footer: {
+                copyright: 'Copyright © 2025 Softver MX'
+              }
+            }
+          },
+          en: {
+            translation: {
+              nav: {
+                home: 'Home',
+                softwareFactory: 'Software Factory',
+                logistics: 'Logistics',
+                login: 'Log-in',
+                contactUs: 'Contact Us'
+              },
+              banner: {
+                slogan: 'WE TRANSFORM TECHNOLOGY INTO VALUE',
+                tellUsYourProject: 'Tell Us Your Project'
+              },
+              softwareFactory: {
+                title: 'SOFTWARE FACTORY',
+                description: 'We develop software with a multidisciplinary and highly trained team',
+                webDesktopSystems: {
+                  title: 'WEB AND DESKTOP SYSTEMS',
+                  description: 'We create web and desktop systems with the latest web technologies. We focus on scalability, performance, and user experience.'
+                },
+                mobileApps: {
+                  title: 'MOBILE APPS',
+                  description: 'For app development, we have experts in Android and iOS'
+                },
+                websites: {
+                  title: 'WEBSITES',
+                  description: 'We create websites, e-commerce, or blogs and self-managed sites'
+                }
+              },
+              services: {
+                title: 'SERVICES',
+                itAudit: 'IT Audit',
+                workPlans: {
+                  title: 'WORK PLANS',
+                  description: 'We design personalized strategies to optimize your project management and efficiently achieve your IT objectives.'
+                },
+                internalProjects: {
+                  title: 'INTERNAL PROJECTS',
+                  description: 'We drive your company\'s success with innovative technological solutions, adapted to your needs and aligned with your organizational goals.'
+                },
+                serviceSecurity: {
+                  title: 'SERVICE SECURITY',
+                  description: 'We protect your digital infrastructure with proactive analysis and measures that guarantee the continuity and security of your services.'
+                },
+                maintenanceProgram: {
+                  title: 'MAINTENANCE PROGRAM',
+                  description: 'We keep your technology in optimal condition with preventive and corrective plans that ensure consistent and reliable performance.'
+                },
+                evaluations: {
+                  title: 'EVALUATIONS',
+                  description: 'We evaluate the performance of your IT environment to identify areas for improvement and maximize the operational efficiency of your infrastructure.'
+                },
+                networkTopology: {
+                  title: 'YOUR NETWORK TOPOLOGY',
+                  description: 'We analyze and optimize your network, ensuring stable and secure connectivity, adapted to the specific needs of your business.'
+                },
+                helpText: 'We help you answer these questions and many more',
+                contactUsButton: 'Contact Us'
+              },
+              staffAugmentation: {
+                title: 'STAFF AUGMENTATION',
+                description: 'Do you need to expand your team with specialized talent? With Staff Augmentation, integrate specialized talent quickly and flexibly to boost your projects. Save time and costs while maintaining full control.',
+                specializedTalent: {
+                  title: 'Specialized Talent',
+                  description: 'Quickly access professionals with the skills your project needs.'
+                },
+                flexibilitySavings: {
+                  title: 'Flexibility and Savings',
+                  description: 'Adjust your team according to demand and reduce operational costs.'
+                },
+                fullControl: {
+                  title: 'Full Control',
+                  description: 'Stay in charge of the project with direct and effective collaboration.'
+                }
+              },
+              successStories: {
+                intro: 'Meet our clients',
+                title: 'INSPIRING SUCCESS STORIES',
+                description: 'Our clients\' success is our greatest achievement. At Softver, we offer innovative solutions and professional service that drives their growth. Find out how we\'ve made a difference.',
+                sepsa: {
+                  text: 'Softver implemented a comprehensive SICI for SEPSA, optimizing operational costs and human resource management efficiently. Their tailored solution and professionalism were fundamental to digitizing their port processes.',
+                  client: 'SEPSA | Eng. Gilberto Ríos Ruíz'
+                },
+                rullan: {
+                  text: 'Softver optimized Grupo Rullan\'s warehouse management with two .NET APIs and a React Native mobile app. It streamlined registration, consultation, and the picking process, directly impacting inventory.',
+                  client: 'Rullan Comex | Manager Ricardo Sanchez'
+                },
+                ofix: {
+                  text: 'Softver designed and implemented Flask APIs to integrate Odoo with Exiros, Beetrack, CT, Excel del Norte, and VTEX. It facilitated key information for the online store and shipment tracking for Tubos de Aceros de México SA, using PostgreSQL and JSON/XML formats.',
+                  client: 'Ofix | Eng. Elías Castellanos & Eng. Rolando Calderon'
+                },
+                verificaciones: {
+                  text: 'Softver developed a comprehensive ERP in Java and MySQL for Grupo (Verificaciones del País, Inversa y Akena), covering quotations, sales, invoicing, accounting, payroll, and inventories. Additionally, a home automation module for access and environment control was integrated.',
+                  client: 'Verificaciones del País, Inversa y Akena | Eng. Alejandro Carus'
+                },
+                jamdex: {
+                  title: 'JAMAICA\'S CENTRAL BANK DIGITAL CURRENCY (CBDC) - JAM-DEX',
+                  text: 'Softver participated in the development of the mobile and backend layer of Jamaica\'s successful CBDC (JamDex) pilot. This pioneering project boosted the adoption of the EJMD digital currency, marking a significant technological advance for the country.',
+                  link: 'Access the publication'
+                }
+              },
+              contactForm: {
+                title: 'Contact our team',
+                description: 'Do you have questions about how we work? Our team is available 24/7 to help you. Chat with us and join the experience in less than 5 minutes.',
+                nameLabel: 'Name',
+                namePlaceholder: 'Name',
+                lastNameLabel: 'Last Name',
+                lastNamePlaceholder: 'Last Name',
+                emailLabel: 'Email',
+                emailPlaceholder: 'youremail@example.com',
+                phoneLabel: 'Phone',
+                phonePlaceholder: 'Your phone',
+                messageLabel: 'Message',
+                messagePlaceholder: 'Write your message here',
+                sendMessage: 'Send Message'
+              },
+              footer: {
+                copyright: 'Copyright © 2025 Softver MX'
+              }
+            }
+          }
+        }
+      }, function(err, t) {
+        // Callback after i18next is initialized
+        updateContent();
+      });
+
+      function updateContent() {
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    element.innerHTML = i18next.t(element.dataset.i18n);
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+    // CAMBIO AQUÍ: Usar i18nPlaceholder en camelCase
+    element.placeholder = i18next.t(element.dataset.i18nPlaceholder);
+  });
+}
+
+      document.querySelectorAll('.lang-button').forEach(button => {
+        button.addEventListener('click', () => {
+          const lang = button.dataset.lang;
+          i18next.changeLanguage(lang, (err, t) => {
+            if (err) return console.log('something went wrong loading', err);
+            updateContent();
+          });
+        });
       });
     </script>
 
